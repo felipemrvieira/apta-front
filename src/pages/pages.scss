@@ -1,0 +1,14 @@
+@import "../template/scss/sb-admin-2.scss";
+
+#dropdown-article-new{
+    position: absolute; 
+    transform: translate3d(-156px, 19px, 0px); 
+    top: 0px; 
+    left: 0px; 
+    will-change: transform;
+}
+
+.rt-th{
+    color: #4e73df;
+    font-weight: 700;
+}
