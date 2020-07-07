@@ -25,7 +25,7 @@ class CategoryForm extends Component {
       const response = await api.get(`/categories/${this.props.categoryId}`);
       const category = response.data.data
       console.log(category)
-      
+
       this.setState({ ...this.state, category: category })
     } catch (err) {
       console.log(err);
@@ -108,7 +108,7 @@ class CategoryForm extends Component {
       <div className="row">
         <div className="col-md-12">
 
-          <div className="card shadow mb-4">       
+          <div className="card shadow mb-4">
 
             {/* <!-- Card Body --> */}
             <div className="card-body">
