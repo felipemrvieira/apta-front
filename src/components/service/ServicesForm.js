@@ -15,8 +15,6 @@ class ServiceForm extends Component {
         description: '',
         price: '',
         // category_ids: [],
-        // image: '',
-
       },
       file: null,
       categories: [],
@@ -40,8 +38,6 @@ class ServiceForm extends Component {
       const response = await api.get(`/services/${this.props.serviceId}`);
       this.setState({ ...this.state, service: response.data })
       this.setState({ ...this.state, selectedCategories: this.renderSelectedCategories() })
-      this.setState({ ...this.state, selectedGalleries: this.renderSelectedGalleries() })
-      this.setState({ ...this.state, selectedTypes: this.renderSelectedTypes() })
 
     } catch (err) {
       console.log(err);
@@ -107,8 +103,6 @@ class ServiceForm extends Component {
         }))
         break;
 
-
-
       default:
         break;
     }
@@ -130,21 +124,22 @@ class ServiceForm extends Component {
     const { selectedCategories } = this.state;
 
     const ids_list = selectedCategories ?
-      (selectedCategories.map(category => (category.value))) :
+      (selectedCategories.map(category => ({"category_id": category.value}))) :
       this.state.service.categories = []
 
-    // await this.setState({
-    //   service: {
-    //     ...this.state.service,
-    //     category_ids: ids_list,
-    //   }
-    // })
+    await this.setState({
+      service: {
+        ...this.state.service,
+          service_categories_attributes: ids_list,
+      }
+    })
     return this.state.service
   }
 
+
   fileUpload = (file, id) => {
     const formData = new FormData();
-    formData.append('service[featured_image]', file)
+    formData.append('service[image]', file)
     const config = {
       headers: {
         'content-type': 'multipart/form-data'
@@ -196,6 +191,7 @@ class ServiceForm extends Component {
     this.setState({ submited: true })
 
     const service = await this.setIdsFromRelationship();
+    console.log(service)
 
     if (this.props.serviceId) {
       this.editService(service);
@@ -269,17 +265,17 @@ class ServiceForm extends Component {
                     value={this.state.service.price} />
                 </div>
 
-                {/* <div className="form-group">
-                  <label htmlFor="editoria">Editoria</label>
+                <div className="form-group">
+                  <label htmlFor="editoria">Categorias</label>
 
                   <Select
-                    value={selectedCategories}
+                    value={this.state.selectedCategories}
                     isMulti
                     onChange={this.handleChangeSelectMulti}
                     options={this.renderCategories()}
                   />
 
-                </div> */}
+                </div>
 
                 <button
                   type="submit"
