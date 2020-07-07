@@ -24,13 +24,13 @@ class LoginPage extends Component {
       });
     } else {
       try {
-        const response = await api.post("/auth/sign_in", { email, password });
-        
+        const response = await api.post("/service_provider_auth/sign_in", { email, password });
+
         const { client, uid } = response.headers;
         const token = response.headers['access-token'];
-        
+
         login(token, client, uid);
-        
+
         // console.log("Token: "  + token);
         // console.log("client: "  + client);
         // console.log("uid: "  + uid);
@@ -66,7 +66,7 @@ class LoginPage extends Component {
                       <div className="col-lg-6">
                         <div className="p-5">
                           <div className="text-center">
-                            
+
                           {process.env.NODE_ENV === "development" ?
                             <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>:""}
 
@@ -85,7 +85,7 @@ class LoginPage extends Component {
                                 placeholder="Enter Email Address..."
                                 onChange={e => this.setState({ user: { ...this.state.user, email: e.target.value } })}
                                 name="email"
-                              // value={this.state.user.email} 
+                              // value={this.state.user.email}
                               />
                             </div>
                             <div className="form-group">
@@ -95,7 +95,7 @@ class LoginPage extends Component {
                                 placeholder="Password"
                                 onChange={e => this.setState({ user: { ...this.state.user, password: e.target.value } })}
                                 name="password"
-                              // value={this.state.user.password} 
+                              // value={this.state.user.password}
                               />
                             </div>
                             <div className="form-group">

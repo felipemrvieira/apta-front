@@ -6,7 +6,7 @@ let API_URL = '';
 if (process.env.NODE_ENV === 'production') {
     API_URL = "http://186.249.51.18/api"
 }else{
-    API_URL = "http://localhost:3001/api"
+    API_URL = "http://localhost:3001"
 }
 
 const api = axios.create({

@@ -25,7 +25,7 @@ class Topbar extends Component {
         try {
           const response = await api.get(`agencies/1`);
           const agency = response.data;
-    
+
           this.setState({ agency });
         } catch (err) {
           console.log(err);
@@ -33,7 +33,7 @@ class Topbar extends Component {
       }
 
     componentDidMount() {
-        this.loadInfos();  
+        this.loadInfos();
     }
 
     render () {
@@ -51,7 +51,7 @@ class Topbar extends Component {
                     <i className="fa fa-bars"></i>
                 </button >
                 <div className="input-group" style={divStyle}>
-                    ITEC CMS
+                    APTA WEB
                 </div>
 
 
@@ -146,7 +146,7 @@ class Topbar extends Component {
                             <i className="fas fa-envelope fa-fw"></i>
                             <span className="badge badge-danger badge-counter">7</span>
                         </div>
-                        
+
                         <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                             <h6 className="dropdown-header">
                                 Message Center
