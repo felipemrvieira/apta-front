@@ -61,6 +61,31 @@ function Sidebar() {
         </div>
       </li>
 
+       {/* <!--  Divider  --> */}
+       <hr className="sidebar-divider" />
+
+      {/* <!--  Heading  --> */}
+      <div className="sidebar-heading">
+        Solicitações
+      </div>
+
+      {/* <!--  Nav Item - Pages Collapse Menu  --> */}
+      <li className="nav-item">
+        <div className="nav-link collapsed" href="#" data-toggle="collapse"
+          data-target="#collapseCompras" aria-expanded="true" aria-controls="collapseCompras">
+          <i className="fas fa-fw fa-cog"></i>
+          <span>Compras</span>
+        </div>
+        <div id="collapseCompras" className="collapse" aria-labelledby="headingTwo"
+          data-parent="#accordionSidebar">
+          <div className="bg-white py-2 collapse-inner rounded">
+            <h6 className="collapse-header">Opções:</h6>
+            <Link className="collapse-item" to={"/carts"}>Listar Compras</Link>
+          </div>
+        </div>
+      </li>
+
+
       {/* <!--  Divider  --> */}
       <hr className="sidebar-divider" />
 

@@ -13,6 +13,9 @@ import CategoriesNewPage from './pages/Categories/CategoriesNewPage';
 import CategoriesShowPage from './pages/Categories/CategoriesShowPage';
 import CategoriesEditPage from './pages/Categories/CategoriesEditPage';
 
+import CartsIndexPage from './pages/Carts/CartsIndexPage';
+import CartsShowPage from './pages/Carts/CartsShowPage';
+
 import UsersIndexPage from './pages/Users/UsersIndexPage';
 import UsersNewPage from './pages/Users/UsersNewPage';
 import UsersShowPage from './pages/Users/UsersShowPage';
@@ -53,6 +56,10 @@ const Routes = () => (
       <PrivateRoute path="/categories/:id" exact={true} component={CategoriesShowPage} />
       <PrivateRoute path="/categories/edit/:id" exact={true} component={CategoriesEditPage} />
       {/* Categories */}
+      {/* Carts */}
+      <PrivateRoute path="/carts" exact={true} component={CartsIndexPage} />
+      <PrivateRoute path="/carts/:id" exact={true} component={CartsShowPage} />
+      {/* Carts */}
       {/* Users */}
       <PrivateRoute path="/users" exact={true} component={UsersIndexPage} />
       <PrivateRoute path="/users/new" exact={true} component={UsersNewPage} />
