@@ -20,10 +20,10 @@ const columns = [
     },
     {
         Header: 'Ações',
-        accessor: 'slug',
+        accessor: 'id',
         Cell: row => (
             <div>
-                <Link className="btn btn-light btn-icon-split" to={`/articles/${row.value}`}>
+                <Link className="btn btn-light btn-icon-split" to={`/services/${row.value}`}>
                     <span className="icon text-gray-600">
                         <i className="fas fa-arrow-right"></i>
                     </span>
@@ -39,11 +39,9 @@ class Category extends Component {
         super(props)
         this.state = {
             category: {
-                id: "",
-                attributes: {
-                    title: "",
-                    articles: [],
-                },
+              id: "",
+              title: "",
+              services: [],
             },
             redirect: false,
             show: false,
@@ -55,7 +53,7 @@ class Category extends Component {
     loadCategory = async () => {
         try {
             const response = await api.get(`categories/${this.props.idCategory}`);
-            const category = response.data.data;
+            const category = response.data;
             console.log(category)
             this.setState({ category: category });
         } catch (err) {
@@ -88,9 +86,6 @@ class Category extends Component {
         const category = this.state.category;
 
         console.log(category)
-        
-        const {articles} = this.state.category.attributes || []
-        console.log(articles)
 
         return (
             <div className="">
@@ -101,7 +96,7 @@ class Category extends Component {
                         <div className="card shadow mb-4">
                             {/* <!-- Card Header - Dropdown --> */}
                             <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 className="m-0 font-weight-bold text-primary">Informações da Editoria</h6>
+                                <h6 className="m-0 font-weight-bold text-primary">Informações da Categoria</h6>
                                 <div className="dropdown no-arrow">
                                     <div className="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i className="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -123,18 +118,24 @@ class Category extends Component {
                             </div>
                             {/* <!-- Card Body --> */}
                             <div className="card-body">
+                              <p><strong>Ícone:</strong></p>
+                              <img
+                                className="img-fluid mb-4"
+                                src={category.image_url}
+                                alt={category.title} />
 
                                 <p><strong>Título: </strong>{category.title}</p>
+                                <p><strong>Cor: </strong>{category.color}</p>
 
                                 <hr />
 
                                 <br />
-                                <h5><strong>Artigos Relacionados:</strong></h5>
+                                <h5><strong>Serviços Relacionados:</strong></h5>
                                 <br />
                                 <ReactTable className="shadow -striped -highlight mb-4"
-                                    data={articles}
+                                    data={this.state.category.services}
                                     columns={columns}
-                                    noDataText="Ainda não existem artigos relacionados cadastrados!"
+                                    noDataText="Ainda não existem serviços relacionados cadastrados!"
                                     defaultPageSize={10}
                                     {...translations}
                                 />

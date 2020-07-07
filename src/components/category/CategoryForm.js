@@ -10,20 +10,19 @@ class CategoryForm extends Component {
     this.state = {
       category: {
         id: '',
-        type: '',
-        attributes: {
-          title: '',
-          articles_related: "",
-          articles: [],
-        },
+        title: '',
+        color: '',
+        icon_url: '',
+        services: [],
       },
+      file: null,
     }
   }
 
   loadCategory = async () => {
     try {
       const response = await api.get(`/categories/${this.props.categoryId}`);
-      const category = response.data.data
+      const category = response.data
       console.log(category)
 
       this.setState({ ...this.state, category: category })
@@ -45,10 +44,16 @@ class CategoryForm extends Component {
       case 'title':
         this.setState(prevState => ({
           category: {
-            attributes: {
-              ...prevState.category.attributes,
-              title: value
-            }
+            ...prevState.category,
+            title: value
+          }
+        }))
+        break;
+        case 'color':
+        this.setState(prevState => ({
+          category: {
+            ...prevState.category,
+            color: value
           }
         }))
         break;
@@ -57,11 +62,37 @@ class CategoryForm extends Component {
     }
   }
 
+  onChangeFile = event => {
+    this.setState({
+      ...this.state,
+      file: event.target.files[0]
+    });
+    console.log(this.state.file)
+  }
+
+  fileUpload = (file, id) => {
+    const formData = new FormData();
+    formData.append('category[icon]', file)
+    const config = {
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    }
+    return api.patch(
+      `/categories/${id}`, formData, config
+    )
+  }
+
   editCategory = async (category) => {
     console.log(JSON.stringify(category))
 
     try {
       await api.patch(`/categories/${this.props.categoryId}`, { category });
+
+      if (this.state.file !== null) {
+        await this.fileUpload(this.state.file, this.props.categoryId)
+        console.log(this.state.category)
+      }
 
       this.setState({
         redirect: true
@@ -73,7 +104,11 @@ class CategoryForm extends Component {
 
   createCategory = async (category) => {
     try {
-      await api.post(`/categories`, { category });
+      const response = await api.post(`/categories`, { category });
+
+      if (this.state.file !== null) {
+        await this.fileUpload(this.state.file, response.data.id)
+      }
 
       this.setState({
         redirect: true
@@ -91,10 +126,10 @@ class CategoryForm extends Component {
     const category = await this.state.category;
 
     if (this.props.categoryId) {
-      this.editCategory(category.attributes);
+      this.editCategory(category);
       console.log("Edita informações publicas")
     } else {
-      this.createCategory(category.attributes);
+      this.createCategory(category);
       console.log("Cria informações publicas")
     }
   }
@@ -114,6 +149,16 @@ class CategoryForm extends Component {
             <div className="card-body">
               <form onSubmit={this.handleSubmit}>
 
+              <div className="form-group">
+                  <label htmlFor="image">Ícone</label> <br />
+                  <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    onChange={this.onChangeFile}
+                  />
+                </div>
+
                 <div className="form-group">
                   <label htmlFor="titulo">Título</label>
                   <input type="text"
@@ -122,7 +167,19 @@ class CategoryForm extends Component {
                     placeholder="Digite aqui"
                     onChange={this.handleChange}
                     name="title"
-                    value={category.attributes.title}
+                    value={category.title}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="titulo">Cor</label>
+                  <input type="text"
+                    className="form-control"
+                    id="color"
+                    placeholder="Digite aqui"
+                    onChange={this.handleChange}
+                    name="color"
+                    value={category.color}
                     required
                   />
                 </div>

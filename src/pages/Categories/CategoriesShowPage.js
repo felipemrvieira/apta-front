@@ -25,7 +25,7 @@ class CategoriesShowPage extends Component {
                                 <div className="container-fluid">
 
                                     {/* <!--  Page Heading  --> */}
-                                    <h1 className="h3 mb-4 text-gray-800">Editoria {this.props.match.params.id} </h1>
+                                    <h1 className="h3 mb-4 text-gray-800">Categoria {this.props.match.params.id} </h1>
                                     <Category idCategory={this.props.match.params.id} />
 
                                 </div>

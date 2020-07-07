@@ -17,11 +17,11 @@ const columns = [
 
     {
         Header: 'Título',
-        accessor: 'attributes.title',
+        accessor: 'title',
     },
     {
         Header: 'Criação',
-        accessor: 'attributes.created_at',
+        accessor: 'created_at',
         Cell: row => (
             <Moment format="DD.MM.YYYY - HH:MM">
                 {row.value}
@@ -29,8 +29,8 @@ const columns = [
         )
     },
     {
-        Header: 'Artigos Relacionados',
-        accessor: 'attributes.articles_related',
+        Header: 'Serviços Relacionados',
+        accessor: 'how_many_services',
     },
     {
         Header: 'Ações',

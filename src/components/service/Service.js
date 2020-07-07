@@ -167,55 +167,6 @@ class Service extends Component {
           {this.renderRatings()}
         </div>
 
-        <Modal
-          show={this.state.show}
-          onHide={() => this.setState({ show: false })}
-          dialogClassName="modal-article"
-          size="xl"
-          aria-labelledby="example-custom-modal-styling-title"
-        >
-          <Modal.Header closeButton>
-            <Modal.Title id="example-custom-modal-styling-title">
-              Pré-vizualização do serviço {this.state.service.id}
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <section className="padding-lateral padding-vertical" id="show-noticia">
-              <p className="chapeu-componente">{service.hat}</p>
-              <h2 className="titulo-componente">{service.title}</h2>
-              <p className="bigode-componente">{service.moustache}</p>
-
-              <div id="noticia-conteudo">
-
-                <div className="noticia-container">
-                  <div className="noticia-imagem-destaque-container">
-                    <img className="noticia-imagem-destaque" src={service.featured_image_url}
-                      alt={service.title} />
-                    <p className="noticia-imagem-destaque-credito">Crédito da foto: {service.credit_photo}</p>
-
-                  </div>
-                  <div className="noticia-autoria">
-                    <p>Texto de {service.credit_journalist}</p>
-                  </div>
-                  <div className="noticia-corpo"
-                    dangerouslySetInnerHTML={{ __html: service.body }} />
-                </div>
-
-                <div className="side-menu">
-                  Menu
-                  <p>Item de menu</p>
-                  <p>Item de menu</p>
-                  <p>Item de menu</p>
-                  <p>Item de menu</p>
-                  <p>Item de menu</p>
-                </div>
-                {/* <SideMenu /> */}
-
-              </div>
-            </section>
-          </Modal.Body>
-        </Modal>
-
       </div>
 
     );

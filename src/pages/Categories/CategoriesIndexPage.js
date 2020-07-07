@@ -18,8 +18,8 @@ class CategoriesIndexPage extends Component {
   loadCategories = async () => {
     try {
       const response = await api.get("/categories");
-      this.setState({ ...this.state, categories: response.data.data })
-      console.log(response.data.data)
+      this.setState({ ...this.state, categories: response.data })
+      console.log(response.data)
     } catch (err) {
       console.log(err);
     }
@@ -42,7 +42,7 @@ class CategoriesIndexPage extends Component {
                 <div className="container-fluid">
 
                   {/* <!--  Page Heading  --> */}
-                  <h1 className="h3 mb-4 text-gray-800">Editorias</h1>
+                  <h1 className="h3 mb-4 text-gray-800">Categorias</h1>
                   <CategoriesTable categories={this.state.categories} />
 
                 </div>

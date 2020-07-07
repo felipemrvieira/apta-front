@@ -24,7 +24,7 @@ class CategoryEditPage extends Component {
                                 <div className="container-fluid">
 
                                     {/* <!--  Page Heading  --> */}
-                                    <h1 className="h3 mb-4 text-gray-800">Editar Editoria {this.props.match.params.id} </h1>
+                                    <h1 className="h3 mb-4 text-gray-800">Editar Categoria {this.props.match.params.id} </h1>
 
                                     <CategoryForm categoryId={this.props.match.params.id}/>
 

@@ -24,7 +24,7 @@ function Sidebar() {
 
       {/* <!--  Heading  --> */}
       <div className="sidebar-heading">
-        Artigos
+        Serviços
       </div>
 
       {/* <!--  Nav Item - Pages Collapse Menu  --> */}
@@ -32,155 +32,31 @@ function Sidebar() {
         <div className="nav-link collapsed" href="#" data-toggle="collapse"
           data-target="#collapseNotice" aria-expanded="true" aria-controls="collapseNotice">
           <i className="fas fa-fw fa-cog"></i>
-          <span>Notícias</span>
+          <span>Serviços</span>
         </div>
         <div id="collapseNotice" className="collapse" aria-labelledby="headingTwo"
           data-parent="#accordionSidebar">
           <div className="bg-white py-2 collapse-inner rounded">
             <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/news"}>Listar Notícias</Link>
-            <Link className="collapse-item" to={"/news/new"}>Cadastrar Notícia</Link>
+            <Link className="collapse-item" to={"/services"}>Listar Serviços</Link>
+            <Link className="collapse-item" to={"/services/new"}>Cadastrar Serviço</Link>
           </div>
         </div>
       </li>
 
-      {/* <!--  Nav Item - Pages Collapse Menu  --> */}
-      <li className="nav-item">
-        <div className="nav-link collapsed" href="#" data-toggle="collapse"
-          data-target="#collapsePhoto" aria-expanded="true" aria-controls="collapsePhoto">
-          <i className="fas fa-fw fa-camera"></i>
-          <span>Galerias de Fotos</span>
-        </div>
-        <div id="collapsePhoto" className="collapse" aria-labelledby="headingTwo"
-          data-parent="#accordionSidebar">
-          <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/photos"}>Listar Galerias</Link>
-            <Link className="collapse-item" to={"/photos/new"}>Cadastrar Galeria</Link>
-          </div>
-        </div>
-      </li>
-
-      {/* <!--  Nav Item - Pages Collapse Menu  --> */}
-      <li className="nav-item">
-        <div className="nav-link collapsed" href="#" data-toggle="collapse"
-          data-target="#collapseVideo" aria-expanded="true" aria-controls="collapseVideo">
-          <i className="fas fa-fw fa-video"></i>
-          <span>Vídeos</span>
-        </div>
-        <div id="collapseVideo" className="collapse" aria-labelledby="headingTwo"
-          data-parent="#accordionSidebar">
-          <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/videos"}>Listar Vídeos</Link>
-            <Link className="collapse-item" to={"/videos/new"}>Cadastrar Vídeo</Link>
-          </div>
-        </div>
-      </li>
-
-      {/* <!--  Nav Item - Pages Collapse Menu  --> */}
-      <li className="nav-item">
-        <div className="nav-link collapsed" href="#" data-toggle="collapse"
-          data-target="#collapsePodcasts" aria-expanded="true" aria-controls="collapsePodcasts">
-          <i className="fas fa-fw fa-podcast"></i>
-          <span>Podcasts</span>
-        </div>
-        <div id="collapsePodcasts" className="collapse" aria-labelledby="headingTwo"
-          data-parent="#accordionSidebar">
-          <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/podcasts"}>Listar Podcasts</Link>
-            <Link className="collapse-item" to={"/podcasts/new"}>Cadastrar Podcast</Link>
-          </div>
-        </div>
-      </li>
-
-      {/* <!--  Nav Item - Pages Collapse Menu  --> */}
-      <li className="nav-item">
-        <div className="nav-link collapsed" href="#" data-toggle="collapse"
-          data-target="#collapseOthers" aria-expanded="true" aria-controls="collapseOthers">
-          <i className="fas fa-fw fa-pager"></i>
-          <span>Programas</span>
-        </div>
-        <div id="collapseOthers" className="collapse" aria-labelledby="headingTwo"
-          data-parent="#accordionSidebar">
-          <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/programs"}>Listar Itens de Programas</Link>
-            <Link className="collapse-item" to={"/programs/new"}>Cadastrar Programa</Link>
-          </div>
-        </div>
-      </li>
-
-      {/* <!--  Divider  --> */}
-      <hr className="sidebar-divider" />
-
-      {/* <!--  Heading  --> */}
-      <div className="sidebar-heading">
-        Itens de página
-      </div>
-
-      {/* <!--  Nav Item - Pages Collapse Menu  --> */}
-      {/* <li className="nav-item">
-        <div className="nav-link collapsed" href="#" data-toggle="collapse"
-          data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i className="fas fa-fw fa-cog"></i>
-          <span>Artigos</span>
-        </div>
-        <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/articles"}>Listar Artigos</Link>
-            <Link className="collapse-item" to={"/articles/new"}>Cadastrar Artigo</Link>
-          </div>
-        </div>
-      </li> */}
-
-      {/* <!--  Nav Item - Pages Collapse Menu  --> */}
-      <li className="nav-item">
-        <div className="nav-link collapsed" href="#" data-toggle="collapse"
-          data-target="#collapseGallery" aria-expanded="true" aria-controls="collapseGallery">
-          <i className="fas fa-fw fa-cog"></i>
-          <span>Bancos de Imagens</span>
-        </div>
-        <div id="collapseGallery" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/galleries"}>Listar Bancos</Link>
-            <Link className="collapse-item" to={"/galleries/new"}>Cadastrar Banco</Link>
-          </div>
-        </div>
-      </li>
-
-      <li className="nav-item">
-        <div className="nav-link collapsed" href="#" data-toggle="collapse"
-          data-target="#collapseBanner" aria-expanded="true" aria-controls="collapseBanner">
-          <i className="fas fa-fw fa-image"></i>
-          <span>Banners</span>
-        </div>
-        <div id="collapseBanner" className="collapse" aria-labelledby="headingTwo"
-          data-parent="#accordionSidebar">
-          <div className="bg-white py-2 collapse-inner rounded">
-            <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/banners"}>Listar Banners</Link>
-            <Link className="collapse-item" to={"/banners/new"}>Cadastrar Banner</Link>
-          </div>
-        </div>
-      </li>
-
-      {/* <!--  Nav Item - Pages Collapse Menu  --> */}
-      <li className="nav-item">
+         {/* <!--  Nav Item - Pages Collapse Menu  --> */}
+         <li className="nav-item">
         <div className="nav-link collapsed" href="#" data-toggle="collapse"
           data-target="#collapseEditoria" aria-expanded="true" aria-controls="collapseEditoria">
           <i className="fas fa-fw fa-tag"></i>
-          <span>Editorias</span>
+          <span>Categorias</span>
         </div>
         <div id="collapseEditoria" className="collapse" aria-labelledby="headingTwo"
           data-parent="#accordionSidebar">
           <div className="bg-white py-2 collapse-inner rounded">
             <h6 className="collapse-header">Opções:</h6>
-            <Link className="collapse-item" to={"/categories"}>Listar Editorias</Link>
-            <Link className="collapse-item" to={"/categories/new"}>Cadastrar Editoria</Link>
+            <Link className="collapse-item" to={"/categories"}>Listar Categorias</Link>
+            <Link className="collapse-item" to={"/categories/new"}>Cadastrar Categoria</Link>
           </div>
         </div>
       </li>
@@ -192,7 +68,6 @@ function Sidebar() {
       <div className="sidebar-heading">
         Perfil
       </div>
-
 
       {/* <!--  Nav Item - Pages Collapse Menu  --> */}
       <li className="nav-item">

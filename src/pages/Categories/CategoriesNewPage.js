@@ -25,7 +25,7 @@ class CategoriesNewPage extends Component {
                                 <div className="container-fluid">
 
                                     {/* <!--  Page Heading  --> */}
-                                    <h1 className="h3 mb-4 text-gray-800">Nova Editoria</h1>
+                                    <h1 className="h3 mb-4 text-gray-800">Nova Categoria</h1>
 
                                     <CategoryForm />
 
