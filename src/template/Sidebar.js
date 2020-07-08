@@ -14,7 +14,7 @@ function Sidebar() {
           <img src={LogoIcon} alt="logo icone" />
         </div>
         <div className="sidebar-brand-full mx-3">
-          <img src={Logo} alt="logo completa" />
+          <img src={LogoIcon} alt="logo completa" />
         </div>
       </Link>
 
@@ -85,17 +85,33 @@ function Sidebar() {
         </div>
       </li>
 
+       {/* <!--  Nav Item - Pages Collapse Menu  --> */}
+       <li className="nav-item">
+        <div className="nav-link collapsed" href="#" data-toggle="collapse"
+          data-target="#collapseAgendamentos" aria-expanded="true" aria-controls="collapseAgendamentos">
+          <i className="fas fa-fw fa-cog"></i>
+          <span>Agendamentos</span>
+        </div>
+        <div id="collapseAgendamentos" className="collapse" aria-labelledby="headingTwo"
+          data-parent="#accordionSidebar">
+          <div className="bg-white py-2 collapse-inner rounded">
+            <h6 className="collapse-header">Opções:</h6>
+            <Link className="collapse-item" to={"/appointments"}>Listar Agendamentos</Link>
+          </div>
+        </div>
+      </li>
+
 
       {/* <!--  Divider  --> */}
-      <hr className="sidebar-divider" />
+      {/* <hr className="sidebar-divider" /> */}
 
       {/* <!--  Heading  --> */}
-      <div className="sidebar-heading">
+      {/* <div className="sidebar-heading">
         Perfil
-      </div>
+      </div> */}
 
       {/* <!--  Nav Item - Pages Collapse Menu  --> */}
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link className="nav-link" to={"/agency"}>
           <i className="fas fa-fw fa-id-badge"></i>
           <span>Secretaria</span>
@@ -118,9 +134,9 @@ function Sidebar() {
             <Link className="collapse-item" to={"/solicitacao-de-informacao"}>Solicitação de Informações</Link>
           </div>
         </div>
-      </li>
+      </li> */}
 
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <div className="nav-link collapsed" href="#" data-toggle="collapse"
           data-target="#collapseSecretaria" aria-expanded="true" aria-controls="collapseSecretaria">
           <i className="fas fa-fw fa-id-badge"></i>
@@ -140,7 +156,7 @@ function Sidebar() {
             <Link className="collapse-item" to={"/solicitacao-de-informacao/new"}>Solicitação de Informações</Link>
           </div>
         </div>
-      </li>
+      </li> */}
 
       {/* <!--  Divider  --> */}
       <hr className="sidebar-divider d-none d-md-block" />
