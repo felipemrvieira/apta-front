@@ -1,13 +1,15 @@
 import axios from "axios";
 import { getToken, getUid, getClient } from "./auth";
 
-let API_URL = '';
+let API_URL = "http://apta-api.herokuapp.com"
 
-if (process.env.NODE_ENV === 'production') {
-    API_URL = "http://apta-api.herokuapp.com"
-}else{
-    API_URL = "http://localhost:3001"
-}
+// let API_URL = '';
+
+// if (process.env.NODE_ENV === 'production') {
+//     API_URL = "http://apta-api.herokuapp.com"
+// }else{
+//     API_URL = "http://localhost:3001"
+// }
 
 const api = axios.create({
     baseURL: API_URL
