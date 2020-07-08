@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/felipemrvieira/apta-front/static/css/main.eb03a1f1.chunk.css",
+    "main.css": "/felipemrvieira/apta-front/static/css/main.2765e4fb.chunk.css",
     "main.js": "/felipemrvieira/apta-front/static/js/main.230a9268.chunk.js",
     "main.js.map": "/felipemrvieira/apta-front/static/js/main.230a9268.chunk.js.map",
     "runtime-main.js": "/felipemrvieira/apta-front/static/js/runtime-main.7807375b.js",
@@ -9,10 +9,10 @@
     "static/js/2.79302586.chunk.js": "/felipemrvieira/apta-front/static/js/2.79302586.chunk.js",
     "static/js/2.79302586.chunk.js.map": "/felipemrvieira/apta-front/static/js/2.79302586.chunk.js.map",
     "index.html": "/felipemrvieira/apta-front/index.html",
-    "precache-manifest.3bea916e37c6b08bf1c646283ecd34fb.js": "/felipemrvieira/apta-front/precache-manifest.3bea916e37c6b08bf1c646283ecd34fb.js",
+    "precache-manifest.79bab7a6c9d44defac5b1cf0c28a6597.js": "/felipemrvieira/apta-front/precache-manifest.79bab7a6c9d44defac5b1cf0c28a6597.js",
     "service-worker.js": "/felipemrvieira/apta-front/service-worker.js",
     "static/css/2.ea00d411.chunk.css.map": "/felipemrvieira/apta-front/static/css/2.ea00d411.chunk.css.map",
-    "static/css/main.eb03a1f1.chunk.css.map": "/felipemrvieira/apta-front/static/css/main.eb03a1f1.chunk.css.map",
+    "static/css/main.2765e4fb.chunk.css.map": "/felipemrvieira/apta-front/static/css/main.2765e4fb.chunk.css.map",
     "static/js/2.79302586.chunk.js.LICENSE.txt": "/felipemrvieira/apta-front/static/js/2.79302586.chunk.js.LICENSE.txt",
     "static/media/Service.scss": "/felipemrvieira/apta-front/static/media/GothamBold.db33e70b.ttf",
     "static/media/Login.scss": "/felipemrvieira/apta-front/static/media/logo.520cb7cb.png",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.7807375b.js",
     "static/css/2.ea00d411.chunk.css",
     "static/js/2.79302586.chunk.js",
-    "static/css/main.eb03a1f1.chunk.css",
+    "static/css/main.2765e4fb.chunk.css",
     "static/js/main.230a9268.chunk.js"
   ]
 }

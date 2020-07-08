@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/felipemrvieira/apta-front/precache-manifest.3bea916e37c6b08bf1c646283ecd34fb.js"
+  "/felipemrvieira/apta-front/precache-manifest.79bab7a6c9d44defac5b1cf0c28a6597.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "af2d623ab6f0db04e3f2885c1205b159",
+    "revision": "5cfcd27fcfde718157bd0b2ce13e026d",
     "url": "/felipemrvieira/apta-front/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/felipemrvieira/apta-front/static/css/2.ea00d411.chunk.css"
   },
   {
-    "revision": "7efff336ce54504256fb",
-    "url": "/felipemrvieira/apta-front/static/css/main.eb03a1f1.chunk.css"
+    "revision": "1a9f5406dbd3c4391e9f",
+    "url": "/felipemrvieira/apta-front/static/css/main.2765e4fb.chunk.css"
   },
   {
     "revision": "126c1a2a4ee937910489",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/felipemrvieira/apta-front/static/js/2.79302586.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7efff336ce54504256fb",
+    "revision": "1a9f5406dbd3c4391e9f",
     "url": "/felipemrvieira/apta-front/static/js/main.230a9268.chunk.js"
   },
   {
